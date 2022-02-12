@@ -7,7 +7,7 @@ function Result ({results}){
     return(
         <ScrollView>
             <View style = {styles.resultItem}>
-                {results.Map((item, index) =>(
+                {results.map((item, index) =>(
                     <View key = {index} style = {styles.resultItem}>
                         <Text style = {styles.resultItemText}>
                             Lap {results.length - index}

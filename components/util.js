@@ -14,5 +14,13 @@ export const displayTime = (centiseconds) => {
 
     let remainCentiseconds = centiseconds %100;
     seconds = (centiseconds = remainCentiseconds) /100;
+
+    if (seconds < 60){
+        return `00:${padTotwo(seconds)}:${padTotwo(remainCentiseconds)}`;
+    }
     
+    let remaingSeconds = seconds % 60;
+    minutes = (seconds - remaingSeconds) / 60;
+
+    return `${padTotwo(minutes)} : ${padTotwo(remaingSeconds)} : ${padTotwo(remainCentiseconds)}`
 }
